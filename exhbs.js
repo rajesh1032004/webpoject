@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const port = process.env.PORT || 9000;
 
 
 app.set("view engine","hbs");
@@ -22,6 +23,6 @@ app.get("", (req ,res) => {
     res.render("hi.hbs");
 });
 
-app.listen(9000, () => {
+app.listen(port, () => {
     console.log("all the best");
 });
